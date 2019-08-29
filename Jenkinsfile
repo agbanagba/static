@@ -8,5 +8,9 @@ pipeline {
                  }
              }
          }
+
+         stage('Linting') {
+             tidy -q -e *.html
+         }
      }
 }
