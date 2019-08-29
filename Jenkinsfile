@@ -4,7 +4,7 @@ pipeline {
          stage('Upload to AWS') {
              steps {
                  withAWS(credentials: 'aws-static') {
-                     s3upload(file: 'index.html', bucket: 'static-udacity-aws-app', path: '/')
+                     s3Upload(file: 'index.html', bucket: 'static-udacity-aws-app', path: '/')
                  }
              }
          }
