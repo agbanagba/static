@@ -10,7 +10,9 @@ pipeline {
          }
 
          stage('Linting') {
-             tidy -q -e *.html
+             steps {
+                 tidy -q -e *.html
+             }
          }
      }
 }
